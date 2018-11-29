@@ -1,8 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
-
-class AddAccount extends React.Component {
+class AddAcc extends React.Component {
       AddBtnF=()=>{
         let accountObj={
             Name:'',
@@ -16,11 +15,33 @@ class AddAccount extends React.Component {
             TimeD:'',
             type:'',
             Amount:'',
-            AccountId:''
+            AccountId:'',
+            Decr:'',
         }
-          accountObj.Name=this.refs.FirstName.value;
-          accountObj.Type=this.refs.Acc_Type.value;
+        if(this.refs.FirstName.value!=='')
+        {
+            accountObj.Name=this.refs.FirstName.value;
+        }
+        else{
+            alert("All fields required")
+            return
+        }
+        if(this.refs.Acc_Type.value!=='')
+        {
+            accountObj.Type=this.refs.Acc_Type.value;
+        }
+        else{
+            alert("All fields required")
+            return
+        }
+        if(this.refs.Amount_here.value!=='')
+        {
           accountObj.Balance=this.refs.Amount_here.value;
+        }
+        else{
+            alert("All fields required")
+            return
+        }
           const myDate=new Date();
           accountObj.Date=myDate;
           accountObj.Id=parseInt(Math.random()*66666666);
@@ -29,18 +50,17 @@ class AddAccount extends React.Component {
           transObj.type='Debit';
           transObj.Amount=accountObj.Balance;
           transObj.AccountId=accountObj.Id;
-          this.props.dispatch({type:"Add_Account",payload:accountObj})
+          transObj.Decr='Initial Deposit';
           this.props.dispatch({type:"Add_Transection",payload:transObj})
-         
-        // console.log(this.props);
+          this.props.dispatch({type:"Add_Account",payload:accountObj})
             
       }
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    <div className="col s12 m12">
-                        <div className="card-panel teal">
+                    <div className="col s12 m12 white">
+                        <div className="card-panel cyan lighten-2">
                             <h2 className="white-text center">
                                 Enter Account detail here
                         </h2>
@@ -48,18 +68,18 @@ class AddAccount extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="input-field col s12 m8 offset-m2">
-                                    <input id="first_name" ref="FirstName"  type="text" className="validate" />
+                                    <input id="first_name" ref="FirstName" defaultValue="Hamza Manzoor" required type="text" className="validate" />
                                     <label htmlFor="first_name">Full Name</label>
                                 </div>
                                 <div className="input-field col s12 m8 offset-m2">
                                 <select className="browser-default" ref="Acc_Type">
-                                    <option value=""  defaultValue>Select your Account Type</option>
+                                    <option value="" disabled defaultValue>Account type</option>
                                     <option value="Current">Current</option>
-                                    <option value="Svings">Saving</option>
+                                    <option value="Saving">Saving</option>
                                 </select>
                                 </div>
                                 <div className="input-field col s12 m8 offset-m2">
-                                    <input id="Amount_here" ref="Amount_here" type="number"  className="validate" />
+                                    <input id="Amount_here" ref="Amount_here" type="text" defaultValue="2000" className="validate" />
                                     <label htmlFor="Amount_here">Amount</label>
                                 </div>
                             </div>
@@ -81,4 +101,4 @@ class AddAccount extends React.Component {
 const getMyData=(store)=>{
 return {manu:store.accountReducer,Trans:store.transectionReducer}
 }
-export default connect(getMyData)(AddAccount);
+export default connect(getMyData)(AddAcc);

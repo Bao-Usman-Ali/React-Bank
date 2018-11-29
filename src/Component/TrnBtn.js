@@ -3,31 +3,33 @@ import { Link } from 'react-router-dom';
 
 class TrnBtn extends React.Component {
     render() {
+
         return (
 
-            <div className="card">
-            <div className="card-action">
-                <div className="row">
-                    <div className="col s5">
-                   <i className="fa fa-dollar-sign prefix dollar"></i><h5 className="right trans">Transactions</h5>
-
-                    </div>
-                
-                    <div className="col s7">
-                        <Link to="/Transaction" className="waves-effect waves-light btn-small black white-text right  btn_my">
-                            View All
-                        </Link>
-                    </div>
+            <div className="card grey darken-4">
+            <div className="card-action pRel">
+                <div className="white-text p-2">
+                    <i className="material-icons left medium">
+                    monetization_on
+                </i>
+                    <h5>
+                    Transection
+                </h5>
                 </div>
-                <hr/>
+                <div className="cardBtn">
+                    <Link to="/Transection" className="waves-effect waves-light cyan accent-4 btn z-depth-5 ">
+                        View
+                </Link>
+                </div>
             </div>
             <Link to="/Transection">
-            <div className="card-content center">
-                <span className="card-title">0</span>
-                <span className="card-title">Transactions</span>
-            </div>
+                <div className="card-content center">
+                    <span className="card-title">{this.props.TransLength}</span>
+                    <span className="card-title">Transection</span>
+                </div>
             </Link>
         </div>
+
         )
     }
 }

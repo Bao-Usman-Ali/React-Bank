@@ -1,10 +1,23 @@
-.btn_my{
-  padding: 12px;
-  text-align: center;
-  line-height: 12px;
-  border-radius: 5%;
+body{
+  position: relative;
+  min-height: 100vh;
 }
-
+li>a{
+  font-size: 2rem !important;
+}
+li>a:hover{
+  color: white;
+}
+.brand-logo{
+  font-weight: bolder;
+  font-size: 3rem !important;
+}
+.b_down{
+  border-bottom:1px solid gray;
+}
+.btn_my{
+  padding: none !important;
+}
 .myBody{
   margin-top: 20px;
 }
@@ -12,45 +25,32 @@
 .mybtn{
   width: 100%;
 }
-.user{
-  margin-top: 7%;
+.pRel {
+  display: flex;
+  justify-content: space-between;
 }
-.accounts{
-  margin-right: 10%;
+.p-2{
+  width: 50%;
 }
-.trans{
-  margin-right: 11%;
+.dFlex{
+  position: absolute;
+    right: -10px;
+    top: 120px;
 }
-.dollar{
-  margin-top: 6%;
-}
-
-nav ul a{
-  font-size: 1.8rem;
-}
-nav .brand-logo{
-  font-size: 2.8rem;
-}
-#modal2{
-  top:10%;
-  z-index: 99999;
-  overflow: visible;
-  
-  
-}
-
-.withdrawModal{
-  top:10%;
-  z-index: 99999;
-  overflow: visible;
-}
-.deposite{
-  top:10%;
-  z-index: 99999;
-  overflow: visible;
-}
-.transaction{
-  top:10%;
-  z-index: 99999;
-  overflow: visible;
-}
+.dFlex::after{
+  position: absolute;
+  border: 5px solid #f44336;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  width: 0px;
+  height: 0px;
+  content: '';
+  top:-10px;
+  right: 0px;
+  }
+  .m10{
+    margin-top: 20px;
+  }
+  .btnA{
+    margin: 10px !important;
+  }

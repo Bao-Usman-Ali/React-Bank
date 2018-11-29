@@ -1,22 +1,27 @@
 import React from 'react';
 import AccBtn from './AccBtn';
 import TrnBtn from './TrnBtn';
+import {connect} from 'react-redux';
 
-class Body extends React.Component {
+class Dashbord extends React.Component {
+    
     render() {
+
         return (
             <div className="myBody">
                 <div className="row">
                 <div className="col s12 m6">
-                    <AccBtn />
+                    <AccBtn AccountLength={this.props.manu.length}/>
                 </div>
                 <div className="col s12 m6">
-                    <TrnBtn />
+                    <TrnBtn TransLength={this.props.Trans.length}/>
                 </div>
             </div>
             </div>
         )
     }
 }
-
-export default Body; 
+const countTA=(store)=>{
+return {manu:store.accountReducer,Trans:store.transectionReducer}    
+}
+export default connect(countTA)(Dashbord);

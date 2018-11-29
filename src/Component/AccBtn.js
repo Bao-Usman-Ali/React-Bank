@@ -1,38 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-class AccountBtn extends React.Component {
+class AccBtn extends React.Component {
     render() {
+        
         return (
-            <div className="card">
-                <div className="card-action">
-                    <div className="row">
-                        <div className="col s4">
-                       <i className="fa fa-user prefix user "></i><h5 className="right accounts"> Accounts</h5> 
-
-                        </div>
-                    
-                        <div className="col s5 ">
-                            <Link to="/AddAccount" className="waves-effect waves-light btn-small black white-text  btn_my">
-                                Create Account
-                            </Link>
-                        </div>
-                        <div className="col s3 ">
-                            <Link to="/Account" className="waves-effect waves-light btn-small black white-text  btn_my">
-                                View All
-                            </Link>
-                        </div>
+            <div className="card grey darken-4">
+                <div className="card-action pRel">
+                    <div className="white-text p-2">
+                        <i className="material-icons left medium">
+                            account_circle
+                    </i>
+                        <h5>
+                            Accounts
+                    </h5>
                     </div>
-                    <hr/>
+                    <div className="cardBtn">
+                        <Link to="/Account" className="waves-effect waves-light cyan accent-4 btn z-depth-5">
+                            view
+                    </Link>
+                    </div>
                 </div>
-                <Link to="/Account">
-                <div className="card-content center">
-                    <span className="card-title">0</span>
-                    <span className="card-title">Accounts</span>
-                </div>
+                <Link to="/AddAcc">
+                    <div className="card-content center">
+                        <span className="card-title">{this.props.AccountLength}</span>
+                        <span className="card-title">Accounts</span>
+                    </div>
                 </Link>
             </div>
+
         )
     }
 }
-export default AccountBtn;
+export default AccBtn;
