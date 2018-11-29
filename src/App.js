@@ -1,28 +1,48 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+import Dashboard from './Component/Dashboard';
+import Account from './Component/Account';
+import Transaction from './Component/Transaction';
+import AddAccount from './Component/AddAccount';
 
-class App extends Component {
+// import AccountD from './Component/AccountD';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import store from './Redux'
+import {Provider} from 'react-redux'
+
+import './App.css';
+import './skeleton.css';
+
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+       
+      <BrowserRouter>
+          
+    <div>
+    <Header />
+    <div className="container">
+    
+    <Provider store={store}>
+      <Switch>
+      
+        <Route path="/AddAccount"  component={AddAccount} />
+        <Route path="/Account" component={Account} />
+        <Route path="/Transaction" component={Transaction} />
+        <Route path="/" exact component={Dashboard}/>
+        </Switch>
+        </Provider>
+        </div>
+        <Footer />
+    </div>
+      
+      </BrowserRouter>
+     
+    )
   }
-}
 
+}
 export default App;
