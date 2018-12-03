@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
-import Dashbord from './Component/Dashbord';
+import Dashboard from './Component/Dashboard';
 import Account from './Component/Account';
-import Transection from './Component/Transection';
+import Transaction from './Component/Transaction';
 import AddAcc from './Component/AddAcc';
 import ErrorPage from './Component/404';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -29,8 +29,8 @@ class App extends React.Component {
       <Switch>
         <Route path="/AddAcc"  component={AddAcc} />
         <Route path="/Account" component={Account} />
-        <Route path="/Transection" component={Transection} />
-        <Route path="/" exact component={Dashbord}/>
+        <Route path="/Transaction" component={Transaction} />
+        <Route path="/" exact component={Dashboard}/>
         <Route path="" component={ErrorPage}/>
         </Switch>
         </Provider>

@@ -45,7 +45,7 @@ class Deposite extends React.Component{
     render(){
         return(
             <div className="modal DepositeModal">
-      <h4 className="grey card-panel darken-4 white-text center">Deposite</h4>
+      <h4 className="teal card-panel  white-text center">Deposite</h4>
     <div className="modal-content">
     <div className="row">
     <div className="input-field col s12">

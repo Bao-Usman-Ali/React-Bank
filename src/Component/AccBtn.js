@@ -5,9 +5,9 @@ class AccBtn extends React.Component {
     render() {
         
         return (
-            <div className="card grey darken-4">
+            <div className="card ">
                 <div className="card-action pRel">
-                    <div className="white-text p-2">
+                    <div className="black-text p-2">
                         <i className="material-icons left medium">
                             account_circle
                     </i>
@@ -16,12 +16,16 @@ class AccBtn extends React.Component {
                     </h5>
                     </div>
                     <div className="cardBtn">
-                        <Link to="/Account" className="waves-effect waves-light cyan accent-4 btn z-depth-5">
-                            view
+                    <Link to="/AddAcc" className="waves-effect left waves-light create btn-small ">
+                                Create Account
                     </Link>
+                        <Link to="/Account" className="waves-effect right waves-light view-all   btn-small ">
+                            view All
+                    </Link>
+                    
                     </div>
                 </div>
-                <Link to="/AddAcc">
+                <Link to="/Account">
                     <div className="card-content center">
                         <span className="card-title">{this.props.AccountLength}</span>
                         <span className="card-title">Accounts</span>

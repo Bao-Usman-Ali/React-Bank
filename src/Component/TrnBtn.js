@@ -6,26 +6,26 @@ class TrnBtn extends React.Component {
 
         return (
 
-            <div className="card grey darken-4">
+            <div className="card">
             <div className="card-action pRel">
-                <div className="white-text p-2">
+                <div className="black-text p-2">
                     <i className="material-icons left medium">
                     monetization_on
                 </i>
                     <h5>
-                    Transection
+                    Transaction
                 </h5>
                 </div>
                 <div className="cardBtn">
-                    <Link to="/Transection" className="waves-effect waves-light cyan accent-4 btn z-depth-5 ">
-                        View
+                    <Link to="/Transaction" className="waves-effect waves-light  btn-small ">
+                        View All
                 </Link>
                 </div>
             </div>
-            <Link to="/Transection">
+            <Link to="/Transaction">
                 <div className="card-content center">
                     <span className="card-title">{this.props.TransLength}</span>
-                    <span className="card-title">Transection</span>
+                    <span className="card-title">Transaction</span>
                 </div>
             </Link>
         </div>

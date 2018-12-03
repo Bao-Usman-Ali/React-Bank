@@ -60,7 +60,7 @@ class AddAcc extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col s12 m12 white">
-                        <div className="card-panel cyan lighten-2">
+                        <div className="card-panel teal ">
                             <h2 className="white-text center">
                                 Enter Account detail here
                         </h2>
@@ -68,7 +68,7 @@ class AddAcc extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="input-field col s12 m8 offset-m2">
-                                    <input id="first_name" ref="FirstName" defaultValue="Hamza Manzoor" required type="text" className="validate" />
+                                    <input id="first_name" ref="FirstName" defaultValue="usman ali" required type="text" className="validate" />
                                     <label htmlFor="first_name">Full Name</label>
                                 </div>
                                 <div className="input-field col s12 m8 offset-m2">

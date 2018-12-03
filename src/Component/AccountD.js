@@ -78,10 +78,10 @@ class AccountD extends React.Component {
                     </table>
                 </div>
                 <div className="modal-footer">
-                    <button className="btn waves-effect waves-light btnA green" onClick={() => { this.DepositeOpen(this.props.data) }}>
+                    <button className="btn waves-effect waves-light btnA black white-text" onClick={() => { this.DepositeOpen(this.props.data) }}>
                         DEPOSIT
                                     </button>
-                    <button className="btn waves-effect waves-light btnA red" onClick={() => { this.WithDrawOpen(this.props.data) }}>
+                    <button className="btn waves-effect waves-light btnA black white-text" onClick={() => { this.WithDrawOpen(this.props.data) }}>
                         WITHDRAW
                             </button>
                 </div>

@@ -16,7 +16,7 @@ class Account extends React.Component {
     return <tr key={i.Id} onClick={() => { this.clickDataChange(i) }}>
       <td>{i.Id}</td>
       <td>{i.Name}</td>
-      <td>{i.Date}</td>
+      <td>{i.Date.toString()}</td>
       <td>{i.Type}</td>
       <td>{i.Balance}</td>
     </tr>
@@ -26,12 +26,13 @@ class Account extends React.Component {
     myTableData = this.props.manu.length <= 0 ? <tr><td colSpan="5"><h1>Empty</h1></td></tr> : this.props.manu.map((i) => { return this.myAccountD(i); })
     return (
       <div className="container">
-      <h1 className='center'> 
+      
+      <h1 className='right'> 
         Accounts
       </h1>
         <table className="centered responsive-table">
           <thead>
-            <tr className="cyan "><th>Account #</th><th>Name</th><th>Registered</th><th>Account Type</th><th>Balance</th></tr>
+            <tr className="teal white-text "><th>Account #</th><th>Name</th><th>Registered</th><th>Account Type</th><th>Balance</th></tr>
           </thead>
 
           <tbody>

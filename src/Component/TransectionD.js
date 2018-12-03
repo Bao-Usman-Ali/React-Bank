@@ -9,7 +9,7 @@ render(){
     return(
         <div className="modal">
         <div className="modal-content">
-          <h4>Transection Details</h4>
+          <h4 className="center">Transaction Details</h4>
           <table className="responsive-table">
             <tbody>
             <tr>

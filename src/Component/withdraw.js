@@ -45,7 +45,7 @@ class WithDraw extends React.Component{
     render(){
         return(
             <div className="modal withDrawModal">
-      <h4 className="grey card-panel darken-4 white-text center">WithDraw</h4>
+      <h4 className="teal card-panel white-text center">WithDraw</h4>
     <div className="modal-content">
     <div className="row">
     <div className="input-field col s12">
@@ -56,7 +56,7 @@ class WithDraw extends React.Component{
           <input id="Decription" ref="Decription" type="text" className="validate"/>
           <label htmlFor="Decription">Decription (Optional)</label>
         </div>
-    <div className="grey btn darken-4 col s12">Max Amount.<b className="red-text"> {this.props.myData.Balance}</b></div>
+    <div className="teal btn  col s12">Max Amount.<b className="black-text"> {this.props.myData.Balance} Rs</b></div>
 
     </div>
     </div>

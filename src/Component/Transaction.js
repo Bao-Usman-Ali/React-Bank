@@ -26,10 +26,10 @@ class Transaction extends React.Component {
     myTableData=this.props.manu.length<=0?<tr><td colSpan="5"><h1>Empty</h1></td></tr>:this.props.manu.map((i)=>{return this.myAccountD(i)})
     return (
       <div className="container">
-      <h1 className="center">Transaction</h1>
+      <h1 className="right">Transactions</h1>
         <table className="centered responsive-table"> 
           <thead>
-          <tr className="cyan "><th>Transaction ID</th><th>Time</th><th>Account #</th><th>Type</th><th>Amount</th></tr>
+          <tr className="teal white-text "><th>Transaction ID</th><th>Time</th><th>Account #</th><th>Type</th><th>Amount</th></tr>
             </thead>
 
           <tbody>
